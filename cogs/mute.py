@@ -9,7 +9,7 @@ class Timeout(commands.Cog):
         self.bot = bot
 
     @commands.has_permissions(kick_members=True)
-    @commands.slash_command()
+    @commands.slash_command(description="Замутить участника")
     async def timeout(self, interaction, member: disnake.Member, time: str, reason: str):
         try:
             time = datetime.datetime.now() + datetime.timedelta(minutes=(int(time)))
@@ -23,7 +23,7 @@ class Timeout(commands.Cog):
             await interaction.response.send_message(f"Bot doesn't have the required permissions: {e}")
 
     @commands.has_permissions(kick_members=True)
-    @commands.slash_command()
+    @commands.slash_command(description="Размутить участника")
     async def untimeout(self, interaction, member: disnake.Member):
         await member.timeout(reason=None, until=None)
         await interaction.response.send_message(f'Untimed out {member.mention}', ephemeral=True)

@@ -7,7 +7,7 @@ class Avatar(commands.Cog):
         self.bot = bot
 
 
-    @commands.slash_command()
+    @commands.slash_command(description="Показать аваатарку пользователя")
     async def avatar(self, interaction, member: disnake.Member = None):
         user = member or interaction.author
         embed = disnake.Embed(title='Avatar', color=0x314fe8)

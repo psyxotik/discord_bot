@@ -8,7 +8,7 @@ class InteractiveEmbed(commands.Cog):
         self.yes_users = []
         self.no_users = []
 
-    @commands.command()
+    @commands.slash_command(description="Создать интерактивный эмбед")
     async def create_embed(self, ctx):
         embed = disnake.Embed(title="Interactive Embed", description="React with ✅ or ❌")
         self.message = await ctx.send(embed=embed)

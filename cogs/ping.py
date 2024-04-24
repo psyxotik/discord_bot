@@ -5,7 +5,7 @@ class Ping(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.slash_command()
+    @commands.slash_command(description="Проверить работу бота")
     async def ping(self, interaction):
         await interaction.response.send_message('Pong!')
 
