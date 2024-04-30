@@ -1,7 +1,6 @@
 from discord import Intents
 
-Token = 'MTIxMTMzNTUyMjAyNzQzODE3MQ.GINbBW.MoPwurhStdhnmNCHT5VTNrmKBH1Lf3NA6BiENY'
-prefix = '&'
+Token = 'YOUR_TOKEN'
 
 intents = Intents.default()
 intents.presences = True
